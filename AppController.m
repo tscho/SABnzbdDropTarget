@@ -7,6 +7,7 @@
 //
 
 #import "AppController.h"
+#import "SabNZBDDropDelegate.h"
 
 
 @implementation AppController
@@ -29,14 +30,12 @@
 	[dropView registerForDraggedTypes:[NSArray arrayWithObjects:NSPasteboardTypeRTF,
 									   NSPasteboardTypeHTML, 
 									   NSPasteboardTypeString, nil]];
-	[dropView setDropHandler:self];
+	
+	[dropView setDropDelegate:[[SabNZBDDropDelegate alloc] init]];
+	
 	
 	[statusItem setView:dropView];
 	[statusItem setHighlightMode:YES];
-}
-
-- (void) didDrop:(NSPasteboard *)pasteboard {
-	
 }
 
 @end

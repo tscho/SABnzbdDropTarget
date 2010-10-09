@@ -13,7 +13,7 @@
 
 @synthesize statusItem;
 @synthesize icon;
-@synthesize dropHandler;
+@synthesize dropDelegate;
 
 - (id)initWithFrame:(NSRect)frame {
 	NSLog(@"Init");
@@ -91,7 +91,7 @@
 	[self setNeedsDisplay:YES];
 	
 	NSPasteboard *pasteboard = [sender draggingPasteboard];
-	[dropHandler didDrop:pasteboard];
+	[dropDelegate didDrop:pasteboard];
 }
 
 @end

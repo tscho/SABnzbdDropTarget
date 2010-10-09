@@ -16,11 +16,11 @@
 	NSStatusItem *statusItem;
 	NSImage *icon;
 	BOOL isMenuVisible;
-	id <DropDelegate> dropHandler;
+	id <DropDelegate> dropDelegate;
 }
 
 @property (retain, nonatomic) NSStatusItem *statusItem;
 @property (retain, nonatomic) NSImage *icon;
-@property (assign) id <DropDelegate> dropHandler;
+@property (assign) id <DropDelegate> dropDelegate;
 
 @end

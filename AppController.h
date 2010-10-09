@@ -10,7 +10,7 @@
 #import "DropView.h"
 
 
-@interface AppController : NSObject <DropDelegate> {
+@interface AppController : NSObject {
 	IBOutlet DropView *dropView;
 	NSStatusItem *statusItem;
 	IBOutlet NSMenu *statusMenu;
