@@ -13,6 +13,7 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E2150662125D11C100828A4F /* sabnzbd.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2150661125D11C100828A4F /* sabnzbd.icns */; };
+		E21FA0A9126617B50038E0BF /* SabNZBD.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SabNZBD.m */; };
 		E2F1F45B125FA2E300D2F0ED /* SabNZBDDropDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */; };
 		E2F7E81E125D94D100FBEEB4 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */; };
 		E2F7E824125D95CE00FBEEB4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E823125D95CE00FBEEB4 /* AppController.m */; };
@@ -32,6 +33,8 @@
 		8D1107310486CEB800E47090 /* SabNZBDDropTarget-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SabNZBDDropTarget-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SabNZBDDropTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SabNZBDDropTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2150661125D11C100828A4F /* sabnzbd.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = sabnzbd.icns; sourceTree = "<group>"; };
+		E21FA0A7126617B50038E0BF /* SabNZBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SabNZBD.h; sourceTree = "<group>"; };
+		E21FA0A8126617B50038E0BF /* SabNZBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabNZBD.m; sourceTree = "<group>"; };
 		E2F1F3C2125F804B00D2F0ED /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
 		E2F1F459125FA2E300D2F0ED /* SabNZBDDropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SabNZBDDropDelegate.h; sourceTree = "<group>"; };
 		E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabNZBDDropDelegate.m; sourceTree = "<group>"; };
@@ -65,6 +68,8 @@
 				E2F1F3C2125F804B00D2F0ED /* DropDelegate.h */,
 				E2F1F459125FA2E300D2F0ED /* SabNZBDDropDelegate.h */,
 				E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */,
+				E21FA0A7126617B50038E0BF /* SabNZBD.h */,
+				E21FA0A8126617B50038E0BF /* SabNZBD.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				E2F7E81E125D94D100FBEEB4 /* DropView.m in Sources */,
 				E2F7E824125D95CE00FBEEB4 /* AppController.m in Sources */,
 				E2F1F45B125FA2E300D2F0ED /* SabNZBDDropDelegate.m in Sources */,
+				E21FA0A9126617B50038E0BF /* SabNZBD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

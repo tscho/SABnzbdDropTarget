@@ -27,8 +27,7 @@
 	
 	[dropView setMenu:statusMenu];
 	
-	[dropView registerForDraggedTypes:[NSArray arrayWithObjects:NSPasteboardTypeRTF,
-									   NSPasteboardTypeHTML, 
+	[dropView registerForDraggedTypes:[NSArray arrayWithObjects:NSPasteboardTypeHTML,
 									   NSPasteboardTypeString, nil]];
 	
 	[dropView setDropDelegate:[[SabNZBDDropDelegate alloc] init]];

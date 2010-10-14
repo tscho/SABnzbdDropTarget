@@ -30,12 +30,13 @@
 	NSLog(@"Drawing: w:%f h:%f", 
 		  [self bounds].size.width,
 		  [self bounds].size.height);
+	NSLog(@"Image: %@, bounds %@", icon);
 
 	//[statusItem setLength:[icon size].width];
 	[statusItem drawStatusBarBackgroundInRect:[self bounds] withHighlight:isMenuVisible];
 	NSPoint origin = NSMakePoint(StatusItemViewPaddingWidth, StatusItemViewPaddingHeight);
 	
-	[icon drawAtPoint:origin fromRect:[self bounds] operation:NSCompositeClear fraction:1.0];
+	[icon drawAtPoint:origin fromRect:[self bounds] operation:NSCompositeSourceOver fraction:1.0];
 }
 
 - (void)dealloc {
@@ -78,7 +79,8 @@
 	isMenuVisible = YES;
 	[self setNeedsDisplay:YES];
 	
-	return [sender draggingSourceOperationMask];
+	//return [sender draggingSourceOperationMask];
+	return NSDragOperationCopy;
 }
 
 -(void)draggingExited:(id <NSDraggingInfo>)sender {
