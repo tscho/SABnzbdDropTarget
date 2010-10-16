@@ -84,8 +84,8 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 308726918;
-			PBXWorkspaceStateSaveDate = 308726918;
+			PBXPerProjectTemplateStateSaveDate = 308891943;
+			PBXWorkspaceStateSaveDate = 308891943;
 		};
 		perUserProjectItems = {
 			E2150682125D195B00828A4F = E2150682125D195B00828A4F /* PBXTextBookmark */;
@@ -228,6 +228,12 @@
 		vrLoc = 0;
 	};
 	E21FA0A7126617B50038E0BF /* SabNZBD.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = SabNZBD.h;
+		path = /Users/tom/Documents/SabNZBDDropTarget/SabNZBD.h;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {781, 896}}";
 			sepNavSelRange = "{210, 0}";
@@ -236,6 +242,12 @@
 		};
 	};
 	E21FA0A8126617B50038E0BF /* SabNZBD.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = SabNZBD.m;
+		path = /Users/tom/Documents/SabNZBDDropTarget/SabNZBD.m;
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {781, 873}}";
 			sepNavSelRange = "{237, 0}";
@@ -247,7 +259,7 @@
 		fRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */;
 		name = "DropView.m: 64";
 		rLen = 0;
-		rLoc = 1374;
+		rLoc = 1196;
 		rType = 0;
 		vrLen = 760;
 		vrLoc = 994;
@@ -317,7 +329,7 @@
 		fRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */;
 		name = "DropView.m: 82";
 		rLen = 0;
-		rLoc = 1830;
+		rLoc = 1652;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 0;
@@ -327,7 +339,7 @@
 		fRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */;
 		name = "DropView.m: 82";
 		rLen = 0;
-		rLoc = 1830;
+		rLoc = 1652;
 		rType = 0;
 		vrLen = 1625;
 		vrLoc = 177;
@@ -404,7 +416,7 @@
 	};
 	E2F1F3C2125F804B00D2F0ED /* DropDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {523, 477}}";
+			sepNavIntBoundsRect = "{{0, 0}, {523, 360}}";
 			sepNavSelRange = "{240, 0}";
 			sepNavVisRange = "{0, 258}";
 		};
@@ -434,9 +446,9 @@
 	};
 	E2F7E81D125D94D100FBEEB4 /* DropView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {781, 1287}}";
-			sepNavSelRange = "{1830, 0}";
-			sepNavVisRange = "{177, 1625}";
+			sepNavIntBoundsRect = "{{0, 0}, {781, 1222}}";
+			sepNavSelRange = "{505, 0}";
+			sepNavVisRange = "{449, 1560}";
 			sepNavWindowFrame = "{{0, 4}, {840, 1024}}";
 		};
 	};
