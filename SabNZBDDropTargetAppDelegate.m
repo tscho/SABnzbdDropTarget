@@ -12,6 +12,7 @@
 @implementation SabNZBDDropTargetAppDelegate
 
 @synthesize appController;
+@synthesize prefsController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[appController setupStatusItem];

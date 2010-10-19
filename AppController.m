@@ -8,6 +8,8 @@
 
 #import "AppController.h"
 #import "SabNZBDDropDelegate.h"
+#import "PrefsController.h"
+#import "SabNZBDDropTargetAppDelegate.h"
 
 
 @implementation AppController

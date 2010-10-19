@@ -8,12 +8,15 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AppController.h"
+#import "PrefsController.h"
 
 @interface SabNZBDDropTargetAppDelegate : NSObject <NSApplicationDelegate> {
 	IBOutlet AppController *appController;
+	IBOutlet PrefsController *prefsController;
 }
 
 @property IBOutlet (assign) AppController *appController;
+@property IBOutlet (assign) PrefsController *prefsController;
 
 -(IBAction)quit:(id)sender;
 
