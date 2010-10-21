@@ -12,12 +12,13 @@
 
 @interface SabNZBDDropTargetAppDelegate : NSObject <NSApplicationDelegate> {
 	IBOutlet AppController *appController;
-	IBOutlet PrefsController *prefsController;
+	PrefsController *prefsController;
 }
 
 @property IBOutlet (assign) AppController *appController;
-@property IBOutlet (assign) PrefsController *prefsController;
+@property (retain) PrefsController *prefsController;
 
 -(IBAction)quit:(id)sender;
+-(IBAction)showPrefs:(id)sender;
 
 @end

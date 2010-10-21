@@ -22,4 +22,26 @@
 	exit(0);
 }
 
+-(IBAction)showPrefs:(id)sender {
+	[[self getPrefsController] showWindow:self];
+}
+
+- (PrefsController *)getPrefsController {
+	if (prefsController) {
+		return prefsController;
+	}
+	else {
+		NSNib *nib = [[NSNib alloc] initWithNibNamed:@"Prefs" bundle:nil];
+		if(!([nib instantiateNibWithOwner:prefsController])) {
+			NSLog(@"Couldn't load prefs nib");
+			return nil;
+		}
+		
+		[nib release];
+		
+		return prefsController;
+	}
+}
+
+
 @end
