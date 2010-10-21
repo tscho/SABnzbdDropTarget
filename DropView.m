@@ -27,12 +27,6 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-	NSLog(@"Drawing: w:%f h:%f", 
-		  [self bounds].size.width,
-		  [self bounds].size.height);
-	NSLog(@"Image: %@, bounds %@", icon);
-
-	//[statusItem setLength:[icon size].width];
 	[statusItem drawStatusBarBackgroundInRect:[self bounds] withHighlight:isMenuVisible];
 	NSPoint origin = NSMakePoint(StatusItemViewPaddingWidth, StatusItemViewPaddingHeight);
 	
