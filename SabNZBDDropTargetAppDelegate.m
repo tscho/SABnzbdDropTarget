@@ -27,20 +27,12 @@
 }
 
 - (PrefsController *)getPrefsController {
-	if (prefsController) {
-		return prefsController;
+	if (!prefsController) {
+		prefsController = [[PrefsController alloc] initWithWindowNibName:@"Prefs"];
+		NSLog(@"prefsController: %d", [prefsController retainCount]);
+		NSLog(@"Loaded prefs nib");
 	}
-	else {
-		NSNib *nib = [[NSNib alloc] initWithNibNamed:@"Prefs" bundle:nil];
-		if(!([nib instantiateNibWithOwner:prefsController])) {
-			NSLog(@"Couldn't load prefs nib");
-			return nil;
-		}
-		
-		[nib release];
-		
-		return prefsController;
-	}
+	return prefsController;
 }
 
 

@@ -14,6 +14,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E21FA0A9126617B50038E0BF /* SabNZBD.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SabNZBD.m */; };
 		E2970F92126CC5E200A01929 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2970F91126CC5E200A01929 /* PrefsController.m */; };
+		E2F0F87E12763FD300A48181 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E2F1F45B125FA2E300D2F0ED /* SabNZBDDropDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */; };
 		E2F7E81E125D94D100FBEEB4 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */; };
 		E2F7E824125D95CE00FBEEB4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E823125D95CE00FBEEB4 /* AppController.m */; };
@@ -39,6 +40,7 @@
 		E21FA0A8126617B50038E0BF /* SabNZBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabNZBD.m; sourceTree = "<group>"; };
 		E2970F90126CC5E200A01929 /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
 		E2970F91126CC5E200A01929 /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
+		E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
 		E2F1F3C2125F804B00D2F0ED /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
 		E2F1F459125FA2E300D2F0ED /* SabNZBDDropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SabNZBDDropDelegate.h; sourceTree = "<group>"; };
 		E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabNZBDDropDelegate.m; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		E2F7E81D125D94D100FBEEB4 /* DropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
 		E2F7E822125D95CE00FBEEB4 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		E2F7E823125D95CE00FBEEB4 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		E2FC54D0126FDEE6006B07A2 /* Prefs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
+		E2FC54D0126FDEE6006B07A2 /* Prefs.xib */ = {isa = PBXFileReference; explicitFileType = file.xib; name = Prefs.xib; path = /Users/tom/Documents/SabNZBDDropTarget/Prefs.xib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				E2F0F87E12763FD300A48181 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
