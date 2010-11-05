@@ -31,36 +31,11 @@
 							apiKey]];
 	
 	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:requestUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-	NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+	NSHTTPURLResponse *response = [NSHTTPURLResponse alloc];
+	NSError *error = [NSError alloc];
 	
-	if (connection) {
-		response = [[NSMutableData data] retain];
-		return YES;
-	}
-	return NO;
-}
+	[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSData *)data {
-	[response setLength:0];
+	return [response statusCode] == 200;
 }
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[response appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	[connection release];
-	[response release];
-	
-	NSLog(@"Connection error: %@", [error localizedDescription]);
-}
-
--(void)connection:(NSURLConnection *)connectoin didFinishLoading:(NSURLConnection *)connection {
-	[connection release];
-	
-	//do something with data
-	
-	[response release];
-}
-
 @end

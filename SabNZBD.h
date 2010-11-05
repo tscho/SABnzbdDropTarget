@@ -14,7 +14,7 @@
 	NSString *apiKey;
 	
 	@private
-	NSMutableData *response;
+	NSMutableData *received;
 }
 
 @property (retain) NSString *host;
