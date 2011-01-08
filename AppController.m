@@ -11,12 +11,22 @@
 #import "PrefsController.h"
 #import "SabNZBDDropTargetAppDelegate.h"
 
-
 @implementation AppController
 
 @synthesize statusItem;
 @synthesize statusMenu;
 @synthesize dropView;
+
++ (void) initialize {
+	NSMutableDictionary *defaultValues = [NSMutableDictionary dictionary];
+	
+	[defaultValues setObject:@"" forKey:HostPrefKey];
+	[defaultValues setObject:@"" forKey:APIKeyPrefKey];
+	
+	[[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues];
+	
+	NSLog(@"Registered defaults: %@", defaultValues);
+}
 
 - (void) setupStatusItem {
 	[self setStatusItem:[[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength]];

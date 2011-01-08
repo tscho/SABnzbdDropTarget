@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+extern NSString* const APIKeyPrefKey;
+extern NSString* const HostPrefKey;
 
 @interface PrefsController : NSWindowController {
 	NSURL *host;
@@ -20,5 +22,10 @@
 @property (retain) NSString *apiKey;
 @property (assign) IBOutlet NSTextField *hostField;
 @property (assign) IBOutlet NSTextField *apiKeyField;
+
+-(IBAction)apply:(id)sender;
+-(IBAction)cancel:(id)sender;
+
+-(void) displayDefaults;
 
 @end
