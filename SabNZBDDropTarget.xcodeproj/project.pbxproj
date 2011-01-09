@@ -12,7 +12,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		E21FA0A9126617B50038E0BF /* SabNZBD.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SabNZBD.m */; };
+		E21FA0A9126617B50038E0BF /* SabNZBDClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SabNZBDClient.m */; };
 		E2970F92126CC5E200A01929 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2970F91126CC5E200A01929 /* PrefsController.m */; };
 		E2F0F87E12763FD300A48181 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E2F1F45B125FA2E300D2F0ED /* SabNZBDDropDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */; };
@@ -36,8 +36,8 @@
 		8D1107310486CEB800E47090 /* SabNZBDDropTarget-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SabNZBDDropTarget-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* SabNZBDDropTarget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SabNZBDDropTarget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2150661125D11C100828A4F /* sabnzbd.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = sabnzbd.icns; sourceTree = "<group>"; };
-		E21FA0A7126617B50038E0BF /* SabNZBD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SabNZBD.h; sourceTree = "<group>"; };
-		E21FA0A8126617B50038E0BF /* SabNZBD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabNZBD.m; sourceTree = "<group>"; };
+		E21FA0A7126617B50038E0BF /* SabNZBDClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SabNZBDClient.h; sourceTree = "<group>"; };
+		E21FA0A8126617B50038E0BF /* SabNZBDClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SabNZBDClient.m; sourceTree = "<group>"; };
 		E2970F90126CC5E200A01929 /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
 		E2970F91126CC5E200A01929 /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
 		E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
@@ -76,8 +76,8 @@
 				E2F1F3C2125F804B00D2F0ED /* DropDelegate.h */,
 				E2F1F459125FA2E300D2F0ED /* SabNZBDDropDelegate.h */,
 				E2F1F45A125FA2E300D2F0ED /* SabNZBDDropDelegate.m */,
-				E21FA0A7126617B50038E0BF /* SabNZBD.h */,
-				E21FA0A8126617B50038E0BF /* SabNZBD.m */,
+				E21FA0A7126617B50038E0BF /* SabNZBDClient.h */,
+				E21FA0A8126617B50038E0BF /* SabNZBDClient.m */,
 				E2970F90126CC5E200A01929 /* PrefsController.h */,
 				E2970F91126CC5E200A01929 /* PrefsController.m */,
 			);
@@ -222,7 +222,7 @@
 				E2F7E81E125D94D100FBEEB4 /* DropView.m in Sources */,
 				E2F7E824125D95CE00FBEEB4 /* AppController.m in Sources */,
 				E2F1F45B125FA2E300D2F0ED /* SabNZBDDropDelegate.m in Sources */,
-				E21FA0A9126617B50038E0BF /* SabNZBD.m in Sources */,
+				E21FA0A9126617B50038E0BF /* SabNZBDClient.m in Sources */,
 				E2970F92126CC5E200A01929 /* PrefsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
