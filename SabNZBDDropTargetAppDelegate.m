@@ -12,13 +12,28 @@
 @implementation SabNZBDDropTargetAppDelegate
 
 @synthesize appController;
+@synthesize prefsController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[appController setupStatusItem];
 }
 
+
+-(PrefsController *)getPrefsController {
+	if (!prefsController) {
+		prefsController = [[PrefsController alloc] init];
+		NSLog(@"prefsController: %d", [prefsController retainCount]);
+		NSLog(@"Loaded prefs nib");
+	}
+	return prefsController;
+}
+
 -(IBAction)quit:(id)sender {
 	exit(0);
+}
+
+-(IBAction)showPrefs:(id)sender {
+	[[self getPrefsController] showWindow:self];
 }
 
 @end
