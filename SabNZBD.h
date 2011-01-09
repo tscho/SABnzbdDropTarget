@@ -10,17 +10,17 @@
 
 
 @interface SabNZBD : NSObject {
-	NSString *host;
+	NSURL *host;
 	NSString *apiKey;
 	
 	@private
 	NSMutableData *received;
 }
 
-@property (retain) NSString *host;
+@property (retain) NSURL *host;
 @property (retain) NSString *apiKey;
 
-- (id)initWithConnectionDetails:(NSString *)host apiKey:(NSString *)apiKey;
+- (id)initWithConnectionDetails:(NSURL *)host apiKey:(NSString *)apiKey;
 - (BOOL)addNzb:(NSURL *)url;
 
 @end

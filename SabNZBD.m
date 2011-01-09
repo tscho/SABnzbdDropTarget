@@ -14,10 +14,10 @@
 @synthesize host;
 @synthesize apiKey;
 
-- (id)initWithConnectionDetails:(NSString *)host apiKey:(NSString *)apiKey {
+- (id)initWithConnectionDetails:(NSURL *)initHost apiKey:(NSString *)initApiKey {
 	if(self = [super init]) {
-		[self setHost:host];
-		[self setApiKey:apiKey];
+		[self setHost:initHost];
+		[self setApiKey:initApiKey];
 	}
 	
 	return self;
@@ -26,7 +26,7 @@
 - (BOOL)addNzb:(NSURL *)url {
 	NSURL *requestUrl = [[NSURL alloc] initWithString:
 						 [NSString stringWithFormat:@"%@/api?mode=addurl&name=%@&apikey=%@",
-							host,
+							[host description],
 							[url description],
 							apiKey]];
 	
