@@ -11,7 +11,7 @@
 extern NSString* const APIKeyPrefKey;
 extern NSString* const HostPrefKey;
 
-@interface PrefsController : NSWindowController {
+@interface PrefsController : NSWindowController <NSWindowDelegate> {
 	NSURL *host;
 	NSString *apiKey;
 	IBOutlet NSTextField *hostField;
@@ -23,9 +23,7 @@ extern NSString* const HostPrefKey;
 @property (assign) IBOutlet NSTextField *hostField;
 @property (assign) IBOutlet NSTextField *apiKeyField;
 
--(IBAction)apply:(id)sender;
--(IBAction)cancel:(id)sender;
-
 -(void) displayDefaults;
+-(void) savePreferences;
 
 @end

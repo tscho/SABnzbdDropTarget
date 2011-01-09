@@ -23,7 +23,7 @@ NSString* const HostPrefKey = @"Host";
 		return nil;
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	NSLog(@"default host: %@", [defaults objectForKey:HostPrefKey]);
+	NSLog(@"default host: %@", [defaults URLForKey:HostPrefKey]);
 	[self setHost:[defaults URLForKey:HostPrefKey]];
 	NSLog(@"default apikey: %@", [defaults objectForKey:APIKeyPrefKey]);
 	[self setApiKey:[defaults objectForKey:APIKeyPrefKey]];
@@ -32,10 +32,11 @@ NSString* const HostPrefKey = @"Host";
 }
 
 -(void) windowDidLoad {
+	[[self window] setDelegate:self];
 	[self displayDefaults];
 }
 
--(IBAction)apply:(id)sender {
+-(void) savePreferences {
 	[self setHost:[NSURL URLWithString:[hostField stringValue]]];
 	NSLog(@"New host value: %@", [self host]);
 	[self setApiKey:[apiKeyField stringValue]];
@@ -43,25 +44,20 @@ NSString* const HostPrefKey = @"Host";
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	[defaults setURL:host forKey:HostPrefKey];
-	NSLog(@"new default host: %@", [defaults objectForKey:HostPrefKey]);
+	NSLog(@"new default host: %@", [defaults URLForKey:HostPrefKey]);
 	[defaults setObject:apiKey forKey:APIKeyPrefKey];
 	NSLog(@"new default apikey: %@", [defaults objectForKey:APIKeyPrefKey]);
-	
-	[self close];
-}
-
--(IBAction)cancel:(id)sender {
-	[self close];
-}
-
--(void)close {
-	[self displayDefaults];
-	[super close];
+	[defaults synchronize];
 }
 
 -(void) displayDefaults {
 	[hostField setStringValue:[[self host] description]];
 	[apiKeyField setStringValue:[self apiKey]];
+}
+
+-(void)windowWillClose:(NSNotification *)notification {
+	NSLog(@"Prefs window will close");
+	[self savePreferences];
 }
 
 @end
