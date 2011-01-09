@@ -3,7 +3,7 @@
 //  SabNZBDDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-18.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Thomas Schoendorfer. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
