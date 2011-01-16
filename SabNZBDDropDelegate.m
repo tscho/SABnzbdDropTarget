@@ -15,11 +15,11 @@
 - (id)init {
 	if(self = [super init]) {
 		classArray = [[NSArray arrayWithObject:[NSURL class]] retain];
-		options = [[[NSDictionary alloc] init] retain];
+		options = [[NSDictionary alloc] init];
 		
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-		client = [[[SabNZBDClient alloc] initWithConnectionDetails:[defaults URLForKey:@"Host"] 
-														withApiKey:[defaults objectForKey:@"APIKey"]] retain];
+		client = [[SabNZBDClient alloc] initWithConnectionDetails:[defaults URLForKey:@"Host"] 
+														withApiKey:[defaults objectForKey:@"APIKey"]];
 	}
 	return self;
 }
@@ -31,6 +31,9 @@
 		NSLog(@"Pasted URL: %@", pastedURL);
 		if(![client addNzb:pastedURL])
 			NSLog(@"Failed to add pasted nzb");
+		else {
+			NSLog(@"Added pasted nzb succesfully");
+		}
 	}
 }
 

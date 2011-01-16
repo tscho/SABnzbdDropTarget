@@ -32,14 +32,19 @@
 	NSLog(@"Request URL: %@", requestUrl);
 	
 	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:requestUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-	NSHTTPURLResponse *response = [NSHTTPURLResponse alloc];
-	NSError *error = [NSError alloc];
+	NSHTTPURLResponse *response;
+	NSError *error;
 	
 	[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
-	//NSLog(@"Error: %@", error);
 	NSLog(@"Got response %d", [response statusCode]);
-	return [response statusCode] == 200;
+	
+	BOOL returnVal = [response statusCode] == 200;
+	
+	[requestUrl release];
+	[request release];
+	
+	return returnVal;
 }
 
 -(void) dealloc {
