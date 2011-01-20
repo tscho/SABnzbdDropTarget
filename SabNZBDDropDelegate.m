@@ -19,7 +19,18 @@
 		
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 		client = [[SABnzbdClient alloc] initWithConnectionDetails:[defaults URLForKey:@"Host"] 
-														withApiKey:[defaults objectForKey:@"APIKey"]];
+													   withApiKey:[defaults objectForKey:@"APIKey"]];
+		
+		
+		[defaults addObserver:self 
+				   forKeyPath:@"Host" 
+					  options:0
+					  context:nil];
+		
+		[defaults addObserver:self 
+				   forKeyPath:@"APIKey" 
+					  options:0 
+					  context:nil];
 	}
 	return self;
 }
@@ -34,6 +45,24 @@
 		else {
 			NSLog(@"Added pasted nzb succesfully");
 		}
+	}
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath 
+					  ofObject:(id)object 
+						change:(NSDictionary *)change 
+					   context:(void *)context {
+	
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+	if([keyPath isEqualToString:@"Host"]) {
+		NSLog(@"Updated client host url");
+		[client setHost:[defaults URLForKey:@"Host"]];
+	}
+	
+	if ([keyPath isEqualToString:@"APIKey"]) {
+		NSLog(@"Updated client api key");
+		[client setApiKey:[defaults objectForKey:@"APIKey"]];
 	}
 }
 
