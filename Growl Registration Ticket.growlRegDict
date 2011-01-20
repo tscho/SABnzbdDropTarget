@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TicketVersion</key>
+	<integer>1</integer>
+	<key>AllNotifications</key>
+	<array>
+		<string>Add Succeeded</string>
+		<string>Add Failed</string>
+	</array>
+	<key>DefaultNotifications</key>
+	<array/>
+	<key>New item</key>
+	<integer>0</integer>
+	<key>New item - 2</key>
+	<integer>1</integer>
+</dict>
+</plist>
