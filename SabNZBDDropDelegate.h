@@ -1,6 +1,6 @@
 //
-//  SabNZBDDropDelegate.h
-//  SabNZBDDropTarget
+//  SABnzbdDropDelegate.h
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-08.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
@@ -8,16 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 #import "DropDelegate.h"
-#import "SabNZBDClient.h"
+#import "SABnzbdClient.h"
 
 
-@interface SabNZBDDropDelegate : NSObject <DropDelegate> {
+@interface SABnzbdDropDelegate : NSObject <DropDelegate> {
 	@private
 	NSArray *classArray;
 	NSDictionary *options;
-	SabNZBDClient *client;
+	SABnzbdClient *client;
 }
 
-@property (retain) SabNZBDClient *client;
+@property (retain) SABnzbdClient *client;
 
 @end

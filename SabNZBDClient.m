@@ -1,15 +1,15 @@
 //
-//  SabNZBD.m
-//  SabNZBDDropTarget
+//  SABnzbdClient.m
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-13.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
 //
 
-#import "SabNZBDClient.h"
+#import "SABnzbdClient.h"
 
 
-@implementation SabNZBDClient
+@implementation SABnzbdClient
 
 @synthesize host;
 @synthesize apiKey;

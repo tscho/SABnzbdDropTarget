@@ -1,6 +1,6 @@
 //
-//  SabNZBD.h
-//  SabNZBDDropTarget
+//  SABnzbdClient.h
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-13.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface SabNZBDClient : NSObject {
+@interface SABnzbdClient : NSObject {
 	NSURL *host;
 	NSString *apiKey;
 }

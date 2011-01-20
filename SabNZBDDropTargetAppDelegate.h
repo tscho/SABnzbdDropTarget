@@ -1,6 +1,6 @@
 //
-//  SabNZBDDropTargetAppDelegate.h
-//  SabNZBDDropTarget
+//  SABnzbdDropTargetAppDelegate.h
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-06.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
@@ -10,7 +10,7 @@
 #import "AppController.h"
 #import "PrefsController.h"
 
-@interface SabNZBDDropTargetAppDelegate : NSObject <NSApplicationDelegate> {
+@interface SABnzbdDropTargetAppDelegate : NSObject <NSApplicationDelegate> {
 	IBOutlet AppController *appController;
 	PrefsController *prefsController;
 }

@@ -1,15 +1,15 @@
 //
 //  AppController.m
-//  SabNZBDDropTarget
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-06.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
 //
 
 #import "AppController.h"
-#import "SabNZBDDropDelegate.h"
+#import "SABnzbdDropDelegate.h"
 #import "PrefsController.h"
-#import "SabNZBDDropTargetAppDelegate.h"
+#import "SABnzbdDropTargetAppDelegate.h"
 
 @implementation AppController
 
@@ -42,7 +42,7 @@
 	[dropView registerForDraggedTypes:[NSArray arrayWithObjects:NSPasteboardTypeHTML,
 									   NSPasteboardTypeString, nil]];
 	
-	[dropView setDropDelegate:[[SabNZBDDropDelegate alloc] init]];
+	[dropView setDropDelegate:[[SABnzbdDropDelegate alloc] init]];
 	
 	
 	[statusItem setView:dropView];

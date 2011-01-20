@@ -1,14 +1,14 @@
 //
-//  SabNZBDDropDelegate.m
-//  SabNZBDDropTarget
+//  SABnzbdDropDelegate.m
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-08.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
 //
 
-#import "SabNZBDDropDelegate.h"
+#import "SABnzbdDropDelegate.h"
 
-@implementation SabNZBDDropDelegate
+@implementation SABnzbdDropDelegate
 
 @synthesize client;
 
@@ -18,7 +18,7 @@
 		options = [[NSDictionary alloc] init];
 		
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-		client = [[SabNZBDClient alloc] initWithConnectionDetails:[defaults URLForKey:@"Host"] 
+		client = [[SABnzbdClient alloc] initWithConnectionDetails:[defaults URLForKey:@"Host"] 
 														withApiKey:[defaults objectForKey:@"APIKey"]];
 	}
 	return self;

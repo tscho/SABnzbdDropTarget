@@ -1,6 +1,6 @@
 //
 //  AppController.h
-//  SabNZBDDropTarget
+//  SABnzbdDropTarget
 //
 //  Created by Thomas Schoendorfer on 10-10-06.
 //  Copyright 2010 Thomas Schoendorfer. All rights reserved.
