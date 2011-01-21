@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+extern NSString* const APIKeyPrefKey;
+extern NSString* const HostPrefKey;
 
 @interface SABnzbdClient : NSObject {
 	NSURL *host;

@@ -18,17 +18,17 @@
 		options = [[NSDictionary alloc] init];
 		
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-		client = [[SABnzbdClient alloc] initWithConnectionDetails:[defaults URLForKey:@"Host"] 
-													   withApiKey:[defaults objectForKey:@"APIKey"]];
+		client = [[SABnzbdClient alloc] initWithConnectionDetails:[defaults URLForKey:HostPrefKey] 
+													   withApiKey:[defaults objectForKey:APIKeyPrefKey]];
 		
 		
 		[defaults addObserver:self 
-				   forKeyPath:@"Host" 
+				   forKeyPath:HostPrefKey
 					  options:0
 					  context:nil];
 		
 		[defaults addObserver:self 
-				   forKeyPath:@"APIKey" 
+				   forKeyPath:APIKeyPrefKey
 					  options:0 
 					  context:nil];
 	}
@@ -55,14 +55,14 @@
 	
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 	
-	if([keyPath isEqualToString:@"Host"]) {
+	if([keyPath isEqualToString:HostPrefKey]) {
 		NSLog(@"Updated client host url");
-		[client setHost:[defaults URLForKey:@"Host"]];
+		[client setHost:[defaults URLForKey:HostPrefKey]];
 	}
 	
-	if ([keyPath isEqualToString:@"APIKey"]) {
+	if ([keyPath isEqualToString:APIKeyPrefKey]) {
 		NSLog(@"Updated client api key");
-		[client setApiKey:[defaults objectForKey:@"APIKey"]];
+		[client setApiKey:[defaults objectForKey:APIKeyPrefKey]];
 	}
 }
 
