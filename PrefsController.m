@@ -8,9 +8,6 @@
 
 #import "PrefsController.h"
 
-NSString* const APIKeyPrefKey = @"APIKey";
-NSString* const HostPrefKey = @"Host";
-
 @implementation PrefsController
 
 @synthesize host;

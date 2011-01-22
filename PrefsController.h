@@ -7,9 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-extern NSString* const APIKeyPrefKey;
-extern NSString* const HostPrefKey;
+#import "SABnzbdClient.h"
 
 @interface PrefsController : NSWindowController <NSWindowDelegate> {
 	NSURL *host;

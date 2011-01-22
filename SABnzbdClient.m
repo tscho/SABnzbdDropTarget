@@ -8,6 +8,8 @@
 
 #import "SABnzbdClient.h"
 
+NSString* const APIKeyPrefKey = @"APIKey";
+NSString* const HostPrefKey = @"Host";
 
 @implementation SABnzbdClient
 
