@@ -13,14 +13,28 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E21FA0A9126617B50038E0BF /* SABnzbdClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SABnzbdClient.m */; };
+		E22BF0B21303903000C475CD /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
+		E22BF0B31303903700C475CD /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E2970F92126CC5E200A01929 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2970F91126CC5E200A01929 /* PrefsController.m */; };
-		E2F0F87E12763FD300A48181 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E2F1F45B125FA2E300D2F0ED /* SABnzbdDropDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1F45A125FA2E300D2F0ED /* SABnzbdDropDelegate.m */; };
 		E2F7E81E125D94D100FBEEB4 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */; };
 		E2F7E824125D95CE00FBEEB4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E823125D95CE00FBEEB4 /* AppController.m */; };
 		E2FC54C6126FDE29006B07A2 /* sabnzbd.icns in Resources */ = {isa = PBXBuildFile; fileRef = E2150661125D11C100828A4F /* sabnzbd.icns */; };
 		E2FC54D1126FDEE6006B07A2 /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FC54D0126FDEE6006B07A2 /* Prefs.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E22BF0B013038FC200C475CD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E22BF0B31303903700C475CD /* BWToolkitFramework.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -56,8 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22BF0B21303903000C475CD /* BWToolkitFramework.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				E2F0F87E12763FD300A48181 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +177,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				E22BF0B013038FC200C475CD /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -179,7 +194,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SABnzbdDropTarget" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SabNZBDDropTarget" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -318,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SABnzbdDropTarget" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SabNZBDDropTarget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
