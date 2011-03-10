@@ -15,7 +15,7 @@
 	PrefsController *prefsController;
 }
 
-@property IBOutlet (assign) AppController *appController;
+@property (assign) IBOutlet AppController *appController;
 @property (retain) PrefsController *prefsController;
 
 -(IBAction)quit:(id)sender;

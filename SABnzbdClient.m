@@ -39,7 +39,7 @@ NSString* const HostPrefKey = @"Host";
 	
 	[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
-	NSLog(@"Got response %d", [response statusCode]);
+	NSLog(@"Got response %@", [response statusCode]);
 	
 	BOOL returnVal = [response statusCode] == 200;
 	

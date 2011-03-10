@@ -13,7 +13,6 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E21FA0A9126617B50038E0BF /* SABnzbdClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SABnzbdClient.m */; };
-		E22BF0B21303903000C475CD /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E22BF0B31303903700C475CD /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E2970F92126CC5E200A01929 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2970F91126CC5E200A01929 /* PrefsController.m */; };
 		E2F1F45B125FA2E300D2F0ED /* SABnzbdDropDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1F45A125FA2E300D2F0ED /* SABnzbdDropDelegate.m */; };
@@ -70,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22BF0B21303903000C475CD /* BWToolkitFramework.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,8 +174,8 @@
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
-				8D11072E0486CEB800E47090 /* Frameworks */,
 				E22BF0B013038FC200C475CD /* CopyFiles */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
 			);
 			buildRules = (
 			);

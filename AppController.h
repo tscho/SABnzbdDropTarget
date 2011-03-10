@@ -17,8 +17,8 @@
 }
 
 @property (retain) NSStatusItem *statusItem;
-@property IBOutlet (assign) NSMenu *statusMenu;
-@property IBOutlet (assign) DropView *dropView;
+@property (assign) IBOutlet NSMenu *statusMenu;
+@property (assign) IBOutlet DropView *dropView;
 
 - (void) setupStatusItem;
 
