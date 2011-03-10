@@ -40,7 +40,7 @@
 	[dropView setMenu:statusMenu];
 	
 	[dropView registerForDraggedTypes:[NSArray arrayWithObjects:NSPasteboardTypeHTML,
-									   NSPasteboardTypeString, nil]];
+        NSPasteboardTypeString, nil]];
 	
 	[dropView setDropDelegate:[[SABnzbdDropDelegate alloc] init]];
 	

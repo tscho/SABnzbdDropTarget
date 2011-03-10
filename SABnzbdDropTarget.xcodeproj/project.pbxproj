@@ -13,8 +13,8 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		E21FA0A9126617B50038E0BF /* SABnzbdClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E21FA0A8126617B50038E0BF /* SABnzbdClient.m */; };
-		E22BF0B31303903700C475CD /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */; };
 		E2970F92126CC5E200A01929 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2970F91126CC5E200A01929 /* PrefsController.m */; };
+		E2EF9FCE1329480E00C71008 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EF9FCD1329480E00C71008 /* BWToolkitFramework.framework */; };
 		E2F1F45B125FA2E300D2F0ED /* SABnzbdDropDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F1F45A125FA2E300D2F0ED /* SABnzbdDropDelegate.m */; };
 		E2F7E81E125D94D100FBEEB4 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E81D125D94D100FBEEB4 /* DropView.m */; };
 		E2F7E824125D95CE00FBEEB4 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F7E823125D95CE00FBEEB4 /* AppController.m */; };
@@ -29,7 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E22BF0B31303903700C475CD /* BWToolkitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +52,7 @@
 		E21FA0A8126617B50038E0BF /* SABnzbdClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SABnzbdClient.m; sourceTree = "<group>"; };
 		E2970F90126CC5E200A01929 /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
 		E2970F91126CC5E200A01929 /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
-		E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Library/Frameworks/BWToolkitFramework.framework; sourceTree = SDKROOT; };
+		E2EF9FCD1329480E00C71008 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = ../../../../Library/Frameworks/BWToolkitFramework.framework; sourceTree = "<group>"; };
 		E2F1F3C2125F804B00D2F0ED /* DropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDelegate.h; sourceTree = "<group>"; };
 		E2F1F459125FA2E300D2F0ED /* SABnzbdDropDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SABnzbdDropDelegate.h; sourceTree = "<group>"; };
 		E2F1F45A125FA2E300D2F0ED /* SABnzbdDropDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SABnzbdDropDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				E2EF9FCE1329480E00C71008 /* BWToolkitFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +99,8 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2EF9FCD1329480E00C71008 /* BWToolkitFramework.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				E2F0F87D12763FD300A48181 /* BWToolkitFramework.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SabNZBDDropTarget" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SABnzbdDropTarget" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -267,6 +267,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -284,6 +288,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SABnzbdDropTarget_Prefix.pch;
@@ -331,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SabNZBDDropTarget" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SABnzbdDropTarget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
