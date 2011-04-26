@@ -17,7 +17,7 @@ NSString* const HostPrefKey = @"Host";
 @synthesize apiKey;
 
 - (id)initWithConnectionDetails:(NSURL *)withHost withApiKey:(NSString *)withApiKey {
-	if(self = [super init]) {
+	if((self = [super init])) {
 		[self setHost:[withHost retain]];
 		[self setApiKey:[withApiKey retain]];
 	}
@@ -38,10 +38,10 @@ NSString* const HostPrefKey = @"Host";
 	NSError *error;
 	
 	[NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-
-	NSLog(@"Got response %@", [response statusCode]);
-	
-	BOOL returnVal = [response statusCode] == 200;
+    
+    NSInteger statusCode = [response statusCode];
+	NSLog(@"Got response %ld", statusCode);
+	BOOL returnVal = statusCode == 200;
 	
 	[requestUrl release];
 	[request release];
