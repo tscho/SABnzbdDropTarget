@@ -22,7 +22,7 @@
 -(PrefsController *)getPrefsController {
 	if (!prefsController) {
 		prefsController = [[PrefsController alloc] init];
-		NSLog(@"prefsController: %@", [prefsController retainCount]);
+		NSLog(@"prefsController: %ld", [prefsController retainCount]);
 		NSLog(@"Loaded prefs nib");
 	}
 	return prefsController;
